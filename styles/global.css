@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* RESETS */
 *,
 *::before,
@@ -5,7 +9,7 @@
   box-sizing: border-box;
 }
 *:focus {
-  outline: 3px dashed #228bec;
+  outline: 3px dashed red;
   outline-offset: 0;
 }
 html {
@@ -32,9 +36,6 @@ button {
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
   appearance: none;
-}
-button::-moz-focus-inner {
-  border: 0;
 }
 button,
 input,
@@ -71,6 +72,10 @@ body {
 }
 /*END RESETS*/
 /* GLOBAL STYLES */
+h1{
+  color: #ca3c3c;
+  background-color: antiquewhite;
+}
 .form-group > input[type="text"] {
   display: inline-block;
   margin-top: 0.4rem;
@@ -94,17 +99,9 @@ body {
   background-color: #ca3c3c;
   border-color: #bd2130;
 }
-.btn__star {
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
-}
-.btn__filter {
-  border-color: lightgrey;
-}
 .btn__primary {
-  color: #fff;
-  background-color: #000;
+  color:#ca3c3c;
+  background-color: antiquewhite;
 }
 .btn-group {
   display: flex;
@@ -275,7 +272,7 @@ body {
 }
 .c-cb > input[type="checkbox"]:focus + label::before {
   border-width: 4px;
-  outline: 3px dashed #228bec;
+  outline: 3px dashed red;
 }
 .c-cb > label::after {
   box-sizing: content-box;
@@ -294,10 +291,4 @@ body {
 }
 .c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
-}
-
-.important{
-  font-size: 2rem;
-  text-decoration: underline;
-  color: red;
 }

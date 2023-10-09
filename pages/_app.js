@@ -11,10 +11,35 @@ export default function Home() {
 
   const [tasks, setTasks] = useState([]);
 
-
   function addTask(name){
     const newTask = {id: `${idCount++}`, name, completed: false};
     setTasks([...tasks,newTask]);
+  }
+
+  function toggleTaskCompleted(id) {
+    const updatedTasks = tasks.map((task) => {
+      if (id === task.id) {
+        return { ...task, completed: !task.completed };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+  }
+
+  function deleteTask(id) {
+    const remainingTasks = tasks.filter((task) => id !== task.id);
+    setTasks(remainingTasks);
+  }
+
+  function editTask(id, newName) {
+    const updatedTask = tasks.map((task) => {
+      if(id === task.id){
+        return {...task,name: newName};
+      }
+      return task;
+    }
+    );
+    setTasks(updatedTask);
   }
 
   const taskList = tasks.map((task) => (
@@ -44,7 +69,6 @@ export default function Home() {
           {taskList} 
       </ul>
     </div>
-
 
     );
 }

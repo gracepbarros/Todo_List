@@ -5,6 +5,7 @@ import '../styles/global.css';
 import Todo from "./components/Todo";
 import Form from "./components/Form";
 
+//Contador para ID, atualizando cada vez que add um novo item
 let idCount = 0; 
 
 export default function Home() {
@@ -53,12 +54,13 @@ export default function Home() {
         editTask={editTask}
     />));
 
+  //Texto de task remaining diferente para plural e singular
   const tasksNoun = taskList.length !== 1 ? "tasks" : "task";
   const headingText = `${taskList.length} ${tasksNoun} remaining`;
 
   return (
     <div className="todoapp stack-large">
-      <h1>Todo List</h1>
+      <h1>Grace's Todo List</h1>
       <Form addTask={addTask}/> 
       <h2 id="list-heading" tabIndex="-1">
         {headingText}

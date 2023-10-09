@@ -20,7 +20,8 @@ A simple Todo List task, where users are able to add, edit, and delete tasks. In
 
 INSTRUCTIONS - HOW TO RUN THE APPLICATION
 
-1. Download the files at your computer.
-2. Open the terminal at the folder downloaded.
+1. Download the files from main branch at your computer.
+2. Open folder downloaded in the terminal.
 3. type "npm run dev" in the terminal
+   3.1 If it gives a message saying "'next' is not recognized as an internal or external command, operable program or batch file." Then, first type "npm i next" and repeat task 3.
 4. Open localhost:3000
